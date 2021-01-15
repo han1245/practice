@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+      padding: 20px; width: 100px; border: 1px solid; cursor: pointer;
+    }
+    </style>
+    <script>
+        window.onload = function() {
+            let all = document.querySelectorAll('div');
+            let inner  = document.querySelector('body');
+            let i = 0;
+            for (let i in all) {
+                all[i].onclick = function() {
+                    let bg = this.getAttribute('title');
+                    inner.style.backgroundColor =bg;
+                }
+            }
+        }
+      </script>
+     
+    
+    
+</head>
+<body>
+    <p>배경색 바꾸기: 기본형</p>
+  <div title="red">red</div>
+  <div title="green">green</div>
+  <div title="blue">blue</div>
+  <div title="yellow">yellow</div>
+  <div title="purple">purple</div>
+
+
+</body>
+</html>
